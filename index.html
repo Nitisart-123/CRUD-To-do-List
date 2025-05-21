@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="todo-container">
+    <h1>CRUD To-Do List</h1>
+    <div class="input-container">
+      <input type="text" id="todo-input" placeholder="เพิ่มรายการใหม่..." required />
+      <button onclick="addBtn()" class="add-btn">เพิ่ม</button>
+    </div>
+    <ul id="todo-list">
+      <!-- รายการ To-Do จะถูกแสดงที่นี่ -->
+
+       
+    </ul>
+  </div>
+  
+  <!-- แก้ไขข้อมูล -->
+  <div class="edit-ui">
+    <h2>แก้ไขรายการ</h2>
+    <div class="input-container">
+      <input type="text" id="edit-input" placeholder="แก้ไขรายการ..." required />
+    </div>
+    <div class="button-container">
+      <button class="confirm-edit-btn" onclick="confirmEdit(this)">บันทึก</button>
+      <button class="cancel-edit-btn" onclick="cancelEdit()">ยกเลิก</button>
+    </div>
+  </div>
+
+  <!-- ลบข้อมูล -->
+  <div class="delete-ui">
+    <h2>คุณต้องการลบรายการนี้หรือไม่</h2>
+    <div class="button-container">
+      <button class="confirm-delete-btn" onclick="confirmDelete(this)">ลบ</button>
+      <button class="cancel-delete-btn" onclick="cancelDelete()">ยกเลิก</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
